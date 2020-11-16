@@ -1,0 +1,65 @@
+/* event */
+#events{
+    background-image:url(../images/recipes/events_bg.png);
+    background-size:cover;
+    text-align: justify;
+}
+.event{
+    width: 40%;
+    margin-left: 20px;
+}
+.event input{
+    border-radius:30px;
+    padding: 10px 20px;
+    width: 65%;
+    border:1px solid #a4d563;
+}
+.event button{
+    transition: all 0.5s ease-in-out;
+    border-radius:30px;
+    padding: 10px 20px;
+    color:#fff;
+    border:none;
+    margin-left: -40px;
+    cursor: pointer;
+    background-color:#a4d563;
+}
+.event button:hover{
+    background-color:#bee18f;
+}
+.event input:focus{
+    outline: none;
+}
+/* event people say part */
+#people{
+    background:url(../images/testimonials.jpg) no-repeat;
+    background-size: contain;
+}
+#people .main__paragraph{
+font-weight: normal;
+}
+#people img{
+    border-radius:50%
+}
+.description{
+    float: left;
+}
+.description div,#people img{
+    display: inline-block;
+}
+#logo{
+    background:url(../images/partners/partners_bg.png) no-repeat;
+    background-size:contain;
+    padding: 100px;
+    min-height: 0;
+}
+#logo img{
+    height: 60px;
+}
+/* media */
+@media (max-width:767px){
+    .event{
+        width: 70%;
+        margin-left: 20px;
+    } 
+}

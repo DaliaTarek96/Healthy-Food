@@ -1,0 +1,184 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+/* ---- Base Rules ---- */
+*{
+    color: #5d5d5d;
+    margin: 0;
+    padding: 0;
+    transition: all .5s ease-in-out;
+}
+*::selection{background-color:#a4d563;color:#fff;}
+body {
+    font-family: 'Lato', serif;
+}
+.back-to-top{
+    display: inline-block;
+    color:white;
+    background-color:#a4d563;
+    border-radius:50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    bottom:20px;
+    right: 20px;
+}
+.back-to-top{
+    padding-top: 5px;
+    font-size: 25px;
+}
+.container{
+    max-width: 95%;
+    padding: 10px;
+    margin: auto;
+}
+/* Typeography General*/
+h1 {
+    font-family: 'Playfair Display', serif;;
+    font-size: 65px;
+    color:#2f3c44 ;
+    font-weight: bold;
+    margin: 2em 0 0.5em 0;
+}
+p {
+    line-height: 1.6em;
+}
+h1,.page__header p{
+    width: 40%;
+}
+a:hover{
+    text-decoration: none;
+}
+/* ---- Layout Rules ---- */
+.main-hero {
+    padding-top: 3em;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+}
+/* ---- Module Rules ---- */
+/* Navigation Styles*/
+.page__header nav{
+    position: fixed;
+    background-color:#fff;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.navbar__menu {
+    box-sizing: content-box;
+    padding: 10px 30px;
+}
+.navbar__menu .navbar__logo img{
+    width: 110px;
+    height: 35px;
+}
+.navbar__menu ul {
+    float: right;
+    text-align: right;
+    margin-right: 40px;
+}
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: .8em;
+    text-decoration: none;
+    color: #5d5d5d;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.anchor__button{
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    border-radius: 25px;
+    border: 2px solid #a4d563;
+    color:#fff;
+    background-color:#a4d563 ;
+    padding: 8px 25px;
+    margin: 20px 0;
+}
+.anchor__button:hover{
+    color:#a4d563;
+    background-color:#fff ;
+}
+/* Header Styles */
+.page__header {
+    background: url(../images/home_page.png) no-repeat;
+    background-size: cover;
+}
+.page__header p{
+    font-size: 20px;
+}
+/* Footer Styles */
+
+.page__footer p{
+    padding-top: .8em;
+    float: left;
+    font-size: 14px;
+}
+.page__footer .navbar__menu{
+    float: right;
+    padding-top: 0;
+}
+.page__footer .navbar__menu .menu__link:hover {
+    color: #a4d563;
+    transition: ease 0.3s all;
+}
+/* media */
+@media  (max-width:992px){
+    h1 {
+        font-size: 50px;
+    }
+    h1,.page__header p{
+        width: 60%;
+    }
+    #direction p{
+        width:100% ;
+    }
+    .page__footer .navbar__menu{
+        display: block;
+        float: left;
+    }
+}
+@media  (max-width: 767px){
+    h1 {
+        font-size: 40px;
+    }
+    h1,.page__header p,#direction p{
+        width: 100%;
+    }
+    .navbar__menu ul{
+        display: block;
+    }
+    .navbar__menu ,.navbar__menu ul{
+        text-align: center;
+    }
+}
+/* global classes */
+.clear{
+    clear: both;
+}
+.active{
+    display:inline-block;
+    width: 8px;
+    height: 8px;
+    margin: auto 4px;
+    border-radius:50%;
+    background-color: #a4d563;
+}
