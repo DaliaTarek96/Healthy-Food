@@ -1,5 +1,5 @@
 /* event */
-#events{
+#event{
     background-image:url(../images/recipes/events_bg.png);
     background-size:cover;
     text-align: justify;
@@ -49,7 +49,7 @@ font-weight: normal;
 }
 #logo{
     background:url(../images/partners/partners_bg.png) no-repeat;
-    background-size:contain;
+    background-size:cover;
     padding: 100px;
     min-height: 0;
 }
