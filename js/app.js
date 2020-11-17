@@ -12,9 +12,10 @@
  * JS Standard: ESlint
  * 
 */
-let scrollValue = $(window).scrollTop();
+ let scrollValue = this.scrollY;
 window.onscroll = () => {
-    scrollValue = $(window).scrollTop();
+    scrollValue = this.scrollY;
+    console.log(scrollValue)
     backToTop();
 };
 // start after load
@@ -30,30 +31,30 @@ window.addEventListener('DOMContentLoaded',()=>{
     navActive(); // change state according to nav choose item
 
     // Scroll to section on link click
-        $('.back-to-top').click(()=>{
-            $('html,body').animate({scrollTop:0},700);
-        });
+        // $('.back-to-top').click(()=>{
+        //     $('html,body').animate({scrollTop:0},700);
+        // });
 
 // to make scroll slow
-$(document).on('click', 'a[href$="t"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top,
-    }, 500);
-});
+// $(document).on('click', 'a[href$="t"]', function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top,
+//     }, 500);
+// });
 });
 function backToTop(){
-     // back to top 
+//      // back to top 
      if(scrollValue >300){
-        $('.back-to-top').fadeIn('fast');
+        document.querySelector('.back-to-top').style.display='block';
     }else{
-        $('.back-to-top').fadeOut('fast');
+        document.querySelector('.back-to-top').style.display='none';
+
     }
 }
 
 function navActive(){
     let navItem = document.querySelectorAll('li');
-    console.log(navItem)
     for(let i=0;i<5;i++){
         navItem[i].addEventListener('mouseover',function(e){
             setTimeout(()=>{
