@@ -133,6 +133,7 @@ function addStepsToDirection(){
     let stepPart = document.querySelector('.steps');
     steps.forEach((step)=>{// add items
         let div = document.createElement('div');
+     console.log('Steps'+step.img+'.jpg');
         div.innerHTML='<img src="../images/direction/Steps'+step.img+'.jpg"/><h5>'+step.title+'</h5><p>'+step.para+'</p>';
         div.classList +='col-12 col-md-4 mb-5';
         stepPart.appendChild(div);
